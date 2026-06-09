@@ -1,0 +1,72 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 60px;
+  background: rgba(11, 31, 58, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(74, 144, 217, 0.1);
+  animation: slideDown 0.8s ease forwards;
+  transition: box-shadow 0.3s;
+}
+.navbar.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Logo */
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; cursor: none;
+}
+.logo-ring {
+  position: relative;
+  animation: logoPulse 3s ease-in-out infinite;
+}
+@keyframes logoPulse {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(74,144,217,0.4)); }
+  50% { filter: drop-shadow(0 0 10px rgba(74,144,217,0.8)); }
+}
+.logo-ring-spin {
+  animation: spin 8s linear infinite;
+  transform-origin: 24px 24px;
+}
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.logo-text {
+  display: flex; flex-direction: column; line-height: 1.2;
+}
+.logo-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px; font-weight: 800;
+  color: var(--white); letter-spacing: -0.3px;
+}
+.logo-title {
+  font-size: 9px; color: var(--blue2);
+  font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+}
+
+/* Nav links */
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  color: var(--gray); text-decoration: none;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.5px;
+  transition: color 0.3s; position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1.5px;
+  background: linear-gradient(90deg, var(--blue), var(--sky));
+  transition: width 0.3s; border-radius: 2px;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--white); }
+.nav-links a.active::after { width: 100%; }
+
+@media (max-width: 768px) {
+  .navbar { padding: 12px 24px; }
+  .nav-links { gap: 20px; }
+  .nav-links a { font-size: 12px; }
+  .logo-title { display: none; }
+}
