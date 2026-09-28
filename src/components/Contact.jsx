@@ -1,31 +1,65 @@
-import './Contact.css'
+import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiDownload } from 'react-icons/fi';
+import { profile } from '../data/content.js';
+import Reveal from './Reveal.jsx';
+import './Contact.css';
 
-const links = [
-  { icon: '📧', label: 'kunabathulapradeepsathya@gmail.com', href: 'mailto:kunabathulapradeepsathya@gmail.com' },
-  { icon: '📞', label: '8897541279', href: 'tel:8897541279' },
-  { icon: '💼', label: 'LinkedIn', href: 'https://www.linkedin.com/in/pradeep-sathya-kunabthula-075021274' },
-  { icon: '⌥', label: 'GitHub', href: 'https://github.com/PradeepSathya89' },
-]
+const channels = [
+  { icon: FiMail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+  { icon: FiLinkedin, label: 'LinkedIn', value: 'Connect with me', href: profile.linkedin },
+  { icon: FiGithub, label: 'GitHub', value: 'See my code', href: profile.github },
+  { icon: FiMapPin, label: 'Location', value: profile.location, href: null },
+];
 
 export default function Contact() {
   return (
-    <section id="contact">
-      <div className="contact-inner">
-        <div className="section-tag">Let's Connect</div>
-        <h2 className="section-title">Get In <span>Touch</span></h2>
-        <p>I'm actively seeking full-time Frontend Developer roles. If you're looking for a motivated developer ready to contribute from day one, let's connect!</p>
-        <div className="contact-links">
-          {links.map((l, i) => (
-            <a key={i} href={l.href} target="_blank" rel="noreferrer" className="contact-link">
-              <span className="contact-link-icon">{l.icon}</span>
-              {l.label}
-            </a>
-          ))}
-        </div>
-        <a href="https://pradeepsathya89.vercel.app" className="btn-primary" target="_blank" rel="noreferrer">
-          🌐 Visit Portfolio Live
-        </a>
+    <section id="contact" className="section contact">
+      <div className="shell">
+        <Reveal className="contact__panel">
+          <div className="contact__intro">
+            <h2>Let&apos;s work together</h2>
+            <p>
+              I&apos;m looking for an entry-level frontend role and I reply to every message.
+              The fastest way to reach me is email.
+            </p>
+            <div className="contact__actions">
+              <a className="btn" href={`mailto:${profile.email}`}>
+                <FiMail aria-hidden="true" />
+                Email me
+              </a>
+              <a className="btn btn--ghost" href={profile.resume} download>
+                <FiDownload aria-hidden="true" />
+                Download resume
+              </a>
+            </div>
+          </div>
+
+          <ul className="contact__channels">
+            {channels.map(({ icon: Icon, label, value, href }) => {
+              const body = (
+                <>
+                  <span className="contact__icon"><Icon aria-hidden="true" /></span>
+                  <span>
+                    <strong>{label}</strong>
+                    <span>{value}</span>
+                  </span>
+                </>
+              );
+
+              return (
+                <li key={label}>
+                  {href ? (
+                    <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+                      {body}
+                    </a>
+                  ) : (
+                    <div>{body}</div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </Reveal>
       </div>
     </section>
-  )
+  );
 }
