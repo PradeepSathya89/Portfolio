@@ -5,8 +5,13 @@
   flex-wrap: nowrap;
   gap: 1.35rem;
   overflow-x: auto;
+<<<<<<< HEAD
   padding: 1.6rem var(--gutter);
   margin: -1.6rem calc(var(--gutter) * -1);
+=======
+  padding: 1.6rem var(--gutter) 1.6rem 0.5rem;
+  margin: -1.6rem calc(var(--gutter) * -1) -1.6rem -0.5rem;
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }

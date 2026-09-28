@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 
 /**
  * Adds a `revealed` flag once the element scrolls into view.
+<<<<<<< HEAD
+=======
+ * Fires once, then stops observing — no work on every scroll frame.
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
  */
 export function useReveal(options = {}) {
   const ref = useRef(null);
@@ -37,13 +41,21 @@ export function useReveal(options = {}) {
     observer.observe(node);
 
     return () => observer.disconnect();
+<<<<<<< HEAD
   }, []);
+=======
+  }, [options]);
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
 
   return [ref, revealed];
 }
 
 /**
+<<<<<<< HEAD
  * Tracks which section is currently on screen.
+=======
+ * Tracks which section is currently on screen, for nav highlighting.
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
  */
 export function useActiveSection(ids) {
   const [active, setActive] = useState(ids[0]);
@@ -55,7 +67,12 @@ export function useActiveSection(ids) {
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort(
+<<<<<<< HEAD
             (a, b) => b.intersectionRatio - a.intersectionRatio
+=======
+            (a, b) =>
+              b.intersectionRatio - a.intersectionRatio
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
           )[0];
 
         if (visible) {
@@ -83,7 +100,12 @@ export function useActiveSection(ids) {
 }
 
 /**
+<<<<<<< HEAD
  * Slowly auto-scrolls a horizontal container.
+=======
+ * Slowly auto-scrolls a horizontal container, looping back to the start.
+ * Pauses on hover, touch, and keyboard focus so it never fights the user.
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
  */
 export function useAutoScroll({ speed = 0.4 } = {}) {
   const ref = useRef(null);
@@ -112,22 +134,40 @@ export function useAutoScroll({ speed = 0.4 } = {}) {
       paused = false;
     };
 
+<<<<<<< HEAD
+=======
+    const handleTouchEnd = () => {
+      setTimeout(resume, 2500);
+    };
+
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
     node.addEventListener('mouseenter', pause);
     node.addEventListener('mouseleave', resume);
     node.addEventListener('touchstart', pause, {
       passive: true,
     });
+<<<<<<< HEAD
     node.addEventListener(
       'touchend',
       () => setTimeout(resume, 2500),
       { passive: true }
     );
+=======
+    node.addEventListener('touchend', handleTouchEnd, {
+      passive: true,
+    });
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
     node.addEventListener('focusin', pause);
     node.addEventListener('focusout', resume);
 
     let pos = node.scrollLeft;
 
     const step = () => {
+<<<<<<< HEAD
+=======
+      // Width of one full set of cards
+      // The row holds two identical sets.
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
       const half = node.children.length / 2;
 
       const loop = node.children[half]
@@ -162,6 +202,10 @@ export function useAutoScroll({ speed = 0.4 } = {}) {
       node.removeEventListener('mouseenter', pause);
       node.removeEventListener('mouseleave', resume);
       node.removeEventListener('touchstart', pause);
+<<<<<<< HEAD
+=======
+      node.removeEventListener('touchend', handleTouchEnd);
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
       node.removeEventListener('focusin', pause);
       node.removeEventListener('focusout', resume);
     };
@@ -171,7 +215,11 @@ export function useAutoScroll({ speed = 0.4 } = {}) {
 }
 
 /**
+<<<<<<< HEAD
  * Typewriter effect for rotating words.
+=======
+ * Typewriter text effect.
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
  */
 export function useTypewriter(
   words,

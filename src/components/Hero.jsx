@@ -30,7 +30,11 @@ export default function Hero() {
           )}
 
           <h1 className="hero__name">
+<<<<<<< HEAD
             Hi, I&apos;m <span className="hero__name-grad">{profile.name}</span>
+=======
+            Hi, I&apos;m {profile.name}
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
           </h1>
 
           <p className="hero__role" aria-label={profile.roles[0]}>
@@ -42,7 +46,10 @@ export default function Hero() {
 
           <div className="hero__actions">
             <a className="btn" href="#projects">View my work</a>
+<<<<<<< HEAD
             <a className="btn btn--ghost" href={profile.resume} download>↓ Download resume</a>
+=======
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
             <a className="btn btn--ghost" href="#contact">Get in touch</a>
           </div>
 
@@ -63,6 +70,7 @@ export default function Hero() {
               </a>
             </li>
           </ul>
+<<<<<<< HEAD
 
           <div className="hero__stats">
             {profile.stats.map((s) => (
@@ -72,6 +80,8 @@ export default function Hero() {
               </div>
             ))}
           </div>
+=======
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
         </div>
 
         <div

@@ -21,12 +21,15 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/pradeep-sathya-kunabthula-075021274/',
 
   resume: '/Pradeep-Sathya-Resume.pdf',
+<<<<<<< HEAD
   stats: [
     { value: '34+', label: 'Products built' },
     { value: '12', label: 'Services booking' },
     { value: '4', label: 'Live projects' },
     { value: 'React', label: 'Main stack' },
   ],
+=======
+>>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
   photo: '/profile.jpg',
   photoAlt: '/profile-alt.jpg',
 };
