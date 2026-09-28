@@ -9,6 +9,7 @@ export default function Hero() {
   const [showAlt, setShowAlt] = useState(false);
 
   const toggleAlt = () => setShowAlt((v) => !v);
+
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -30,11 +31,7 @@ export default function Hero() {
           )}
 
           <h1 className="hero__name">
-<<<<<<< HEAD
             Hi, I&apos;m <span className="hero__name-grad">{profile.name}</span>
-=======
-            Hi, I&apos;m {profile.name}
->>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
           </h1>
 
           <p className="hero__role" aria-label={profile.roles[0]}>
@@ -45,32 +42,55 @@ export default function Hero() {
           <p className="hero__tagline">{profile.tagline}</p>
 
           <div className="hero__actions">
-            <a className="btn" href="#projects">View my work</a>
-<<<<<<< HEAD
-            <a className="btn btn--ghost" href={profile.resume} download>↓ Download resume</a>
-=======
->>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
-            <a className="btn btn--ghost" href="#contact">Get in touch</a>
+            <a className="btn" href="#projects">
+              View my work
+            </a>
+
+            <a
+              className="btn btn--ghost"
+              href={profile.resume}
+              download
+            >
+              ↓ Download resume
+            </a>
+
+            <a className="btn btn--ghost" href="#contact">
+              Get in touch
+            </a>
           </div>
 
           <ul className="hero__social">
             <li>
-              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub profile">
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub profile"
+              >
                 <FiGithub aria-hidden="true" />
               </a>
             </li>
+
             <li>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+              >
                 <FiLinkedin aria-hidden="true" />
               </a>
             </li>
+
             <li>
-              <a href={`mailto:${profile.email}`} aria-label="Send me an email">
+              <a
+                href={`mailto:${profile.email}`}
+                aria-label="Send me an email"
+              >
                 <FiMail aria-hidden="true" />
               </a>
             </li>
           </ul>
-<<<<<<< HEAD
 
           <div className="hero__stats">
             {profile.stats.map((s) => (
@@ -80,8 +100,6 @@ export default function Hero() {
               </div>
             ))}
           </div>
-=======
->>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
         </div>
 
         <div
@@ -103,6 +121,7 @@ export default function Hero() {
               height="480"
               loading="eager"
             />
+
             <img
               className="hero__photo hero__photo--b"
               src={profile.photoAlt}

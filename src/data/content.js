@@ -1,10 +1,3 @@
-// ─────────────────────────────────────────────────────────────
-// EDIT THIS FILE ONLY.
-// Every piece of text on the site comes from here, so you never
-// have to hunt through components to change a link or a project.
-// Replace anything marked TODO before you deploy.
-// ─────────────────────────────────────────────────────────────
-
 export const profile = {
   name: 'Pradeep Sathya',
   fullName: 'Kunabathula Pradeep Sathya',
@@ -21,15 +14,14 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/pradeep-sathya-kunabthula-075021274/',
 
   resume: '/Pradeep-Sathya-Resume.pdf',
-<<<<<<< HEAD
+
   stats: [
     { value: '34+', label: 'Products built' },
     { value: '12', label: 'Services booking' },
     { value: '4', label: 'Live projects' },
     { value: 'React', label: 'Main stack' },
   ],
-=======
->>>>>>> 00fef651b76862429170abebcc0a9309f8c3cb30
+
   photo: '/profile.jpg',
   photoAlt: '/profile-alt.jpg',
 };
@@ -48,8 +40,6 @@ export const about = {
   ],
 };
 
-// Only list what you can explain in an interview.
-// level: 'Comfortable' | 'Working knowledge' | 'Learning'
 export const skillGroups = [
   {
     title: 'Frontend',
@@ -97,8 +87,6 @@ export const skillGroups = [
   },
 ];
 
-// Four well-described projects beat six thin ones.
-// "contribution" is the line recruiters actually read — keep it specific.
 export const projects = [
   {
     title: 'Shop Easy — E-Commerce Website',
@@ -108,8 +96,8 @@ export const projects = [
       'Built the product grid, search, filters, wishlist, cart and checkout with Context API and React Hooks for state, React Router for navigation, and an admin dashboard for managing products and orders.',
     tech: ['React.js', 'Vite', 'JavaScript', 'CSS Modules', 'React Router', 'Context API'],
     demo: 'https://ecommerce1-kq9f.vercel.app/',
-    code: '', // TODO: GitHub repo URL
-    image: '/projects/shop-easy.svg', // TODO: swap for a real screenshot
+    code: '',
+    image: '/projects/shop-easy.svg',
     accent: 'a',
   },
   {
@@ -117,37 +105,35 @@ export const projects = [
     summary:
       'A responsive home and business service booking platform covering 12 services, from AC repair to pest control.',
     contribution:
-      'Built a 3-step booking flow (details, scheduling, review & confirm) with a success page, a technician profiles page with ratings and verified badges, user login/register, a booking-history dashboard, and an FAQ accordion — themed with CSS Modules.',
+      'Built a 3-step booking flow with a success page, technician profiles, user login/register, booking history and FAQ accordion.',
     tech: ['React.js', 'Vite', 'JavaScript', 'CSS Modules', 'React Router', 'Context API', 'Bootstrap'],
     demo: 'https://service-booking-website-psi.vercel.app/',
     code: '',
-    image: '/projects/quickserve.svg', // TODO: swap for a real screenshot
+    image: '/projects/quickserve.svg',
     accent: 'b',
   },
   {
     title: 'Peoples Mart — Grocery Storefront',
-    // TODO: this description was inferred from the live site only — replace with what you actually built.
     summary:
-      'An online grocery storefront concept with product browsing and category-based navigation, built as an additional e-commerce practice project.',
+      'An online grocery storefront concept with product browsing and category-based navigation.',
     contribution:
-      'Practiced building a second storefront from scratch with React.js to reinforce component structure, layout and state patterns outside of the main Shop Easy build.',
+      'Practiced building a second storefront from scratch with React.js to reinforce component structure, layout and state patterns.',
     tech: ['React.js', 'JavaScript', 'CSS'],
     demo: 'https://ecommerce-three-brown-88.vercel.app/',
     code: '',
-    image: '/projects/peoples-mart.svg', // TODO: swap for a real screenshot
+    image: '/projects/peoples-mart.svg',
     accent: 'c',
   },
   {
     title: 'Luxora — Laundry Service Website',
-    // TODO: this description was inferred from the live site only — replace with what you actually built.
     summary:
-      'A marketing and booking site for a laundry and dry-cleaning service, covering wash-and-fold, ironing, and pickup & delivery.',
+      'A marketing and booking site for a laundry and dry-cleaning service.',
     contribution:
       'Built the responsive page layout and service sections, focused on clear information hierarchy and mobile-friendly design.',
     tech: ['React.js', 'JavaScript', 'CSS'],
     demo: 'https://basic-website-adld.vercel.app/',
     code: '',
-    image: '/projects/luxora.svg', // TODO: swap for a real screenshot
+    image: '/projects/luxora.svg',
     accent: 'd',
   },
 ];
