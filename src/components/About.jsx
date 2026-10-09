@@ -1,3 +1,4 @@
+import { FiUser } from 'react-icons/fi';
 import { about, profile } from '../data/content.js';
 import Reveal from './Reveal.jsx';
 import './About.css';
@@ -7,7 +8,10 @@ export default function About() {
     <section id="about" className="section about">
       <div className="shell">
         <Reveal className="section-head">
-          <h2>About me</h2>
+          <h2>
+            <span className="head-icon" aria-hidden="true"><FiUser /></span>
+            About me
+          </h2>
           <p>Where I am in my career, and what I am looking for next.</p>
         </Reveal>
 

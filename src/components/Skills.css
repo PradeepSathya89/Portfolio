@@ -151,3 +151,6 @@
   30%      { transform: translateY(-9px) rotate(-3deg); }
   65%      { transform: translateY(-4px) rotate(3deg); }
 }
+
+/* Tight join with the divider above */
+.section.skills { padding-top: 0; }

@@ -1,9 +1,8 @@
 .hero {
   position: relative;
-  min-height: min(100svh, 860px);
   display: flex;
   align-items: center;
-  padding-block: clamp(5rem, 12vw, 7rem) clamp(4rem, 8vw, 6rem);
+  padding-block: clamp(5rem, 12vw, 7rem) clamp(1rem, 2vw, 1.75rem);
   overflow: hidden;
 }
 
@@ -240,7 +239,7 @@
   left: 50%;
   bottom: 1.75rem;
   transform: translateX(-50%);
-  display: grid;
+  display: none;
   place-items: center;
   width: 42px;
   height: 42px;

@@ -1,0 +1,39 @@
+.section-icons {
+  position: relative;
+  width: 100%;
+  height: clamp(130px, 15vw, 200px);
+  pointer-events: none;
+  overflow: visible;
+}
+
+.section-icons__item {
+  position: absolute;
+  top: var(--top-d);
+  width: calc(var(--w) * 1px);
+  height: auto;
+  animation: iconFloat var(--dur, 6s) ease-in-out var(--delay, 0s) infinite;
+  filter: drop-shadow(0 10px 22px rgba(40, 120, 255, 0.35));
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50%      { transform: translateY(-14px) rotate(calc(var(--r, 0deg) * -1)); }
+}
+
+/* shorter gap right under the Home section */
+.section-icons--home { height: clamp(100px, 10vw, 140px); }
+
+@media (max-width: 600px) {
+  .section-icons { height: 120px; }
+  .section-icons--home { height: 96px; }
+  .section-icons__item { width: calc(var(--w) * 0.6px); top: var(--top-m); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-icons__item { animation: none; }
+}
+
+/* The icons now fill the gap, so trim the empty padding next to them */
+.section.about,
+.section.projects { padding-top: 2rem; }
+.section.skills { padding-bottom: 1rem; }
