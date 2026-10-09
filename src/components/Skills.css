@@ -79,3 +79,11 @@
 .level--comfortable { color: #8fe3b0; border-color: rgba(143, 227, 176, 0.4); }
 .level--working     { color: var(--accent); border-color: rgba(88, 198, 242, 0.4); }
 .level--learning    { color: #f0c274; border-color: rgba(240, 194, 116, 0.4); }
+
+/* Clicked card: stays popped while the row is stopped */
+.skills__grid .skills__card.is-selected {
+  z-index: 3;
+  transform: translateY(-12px) scale(1.07);
+  border-color: var(--accent);
+  box-shadow: 0 26px 50px -30px rgba(0, 0, 0, 0.95), 0 0 0 1px var(--accent);
+}

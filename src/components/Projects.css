@@ -167,3 +167,10 @@
 }
 
 .projects__more p { color: var(--muted); margin: 0; }
+
+/* Clicked card: stays popped while the row is stopped */
+.projects__list .project.is-selected article {
+  transform: translateY(-14px) scale(1.06);
+  border-color: var(--accent);
+  box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.95), 0 0 0 1px var(--accent);
+}

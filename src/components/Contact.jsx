@@ -1,4 +1,5 @@
-import { FiMail, FiPhone, FiGithub, FiLinkedin, FiMapPin, FiDownload } from 'react-icons/fi';
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiDownload } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 import { profile } from '../data/content.js';
 import Reveal from './Reveal.jsx';
 import './Contact.css';
@@ -8,7 +9,7 @@ const channels = [
   { icon: FiPhone, label: 'Phone', value: profile.phone, href: `tel:${profile.phone.replace(/\s/g, '')}` },
   { icon: FiLinkedin, label: 'LinkedIn', value: 'Connect with me', href: profile.linkedin },
   { icon: FiGithub, label: 'GitHub', value: 'See my code', href: profile.github },
-  { icon: FiMapPin, label: 'Location', value: profile.location, href: null },
+  { icon: FaWhatsapp, label: 'WhatsApp', value: 'Chat with me', href: profile.whatsapp },
 ];
 
 export default function Contact() {
@@ -21,9 +22,12 @@ export default function Contact() {
         <a className="floater floater--phone" href={`tel:${profile.phone.replace(/\s/g, '')}`} aria-label="Call me">
           <FiPhone aria-hidden="true" />
         </a>
-        <span className="floater floater--pin" role="img" aria-label={profile.location}>
-          <FiMapPin aria-hidden="true" />
-        </span>
+        <a className="floater floater--whatsapp" href={profile.whatsapp} target="_blank" rel="noreferrer" aria-label="Chat with me on WhatsApp">
+          <FaWhatsapp aria-hidden="true" />
+        </a>
+        <a className="floater floater--linkedin" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="My LinkedIn">
+          <FiLinkedin aria-hidden="true" />
+        </a>
         <a className="floater floater--github" href={profile.github} target="_blank" rel="noreferrer" aria-label="My GitHub">
           <FiGithub aria-hidden="true" />
         </a>

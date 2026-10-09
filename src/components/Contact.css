@@ -85,7 +85,7 @@
   .contact__panel { grid-template-columns: 1fr; }
 }
 
-/* ── Floating contact icons (email · phone · location · GitHub) ── */
+/* ── Floating contact icons (email · phone · WhatsApp · LinkedIn · GitHub) ── */
 .contact { position: relative; overflow: hidden; }
 .contact > .shell { position: relative; z-index: 2; }
 
@@ -120,15 +120,19 @@
 .floater svg { width: 30px; height: 30px; display: block; }
 .floater:hover, .floater:focus-visible { filter: brightness(1.2); animation-play-state: paused; }
 
-.floater--mail   { top: 4%;  left: 30%; --dur: 5.2s; --delay: 0s;   --r: -8deg; }
-.floater--phone  { top: 27%; left: 64%; --dur: 6.1s; --delay: -1.6s; --r: 7deg;
-                   background: linear-gradient(145deg, #a46bff, #5a2fe0);
-                   box-shadow: 0 14px 34px -8px rgba(150, 90, 255, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.4); }
-.floater--pin    { top: 52%; left: 40%; --dur: 5.6s; --delay: -2.8s; --r: -6deg;
-                   background: linear-gradient(145deg, #3fb4ff, #1976e8); }
-.floater--github { top: 76%; left: 58%;  --dur: 6.6s; --delay: -0.9s; --r: 6deg;
-                   background: linear-gradient(145deg, #5a6cb0, #1d2656);
-                   box-shadow: 0 14px 34px -8px rgba(90, 130, 255, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(140, 170, 255, 0.35); }
+.floater--mail     { top: 2%;  left: 30%; --dur: 5.2s; --delay: 0s;    --r: -8deg; }
+.floater--phone    { top: 21%; left: 64%; --dur: 6.1s; --delay: -1.6s; --r: 7deg;
+                     background: linear-gradient(145deg, #a46bff, #5a2fe0);
+                     box-shadow: 0 14px 34px -8px rgba(150, 90, 255, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.4); }
+.floater--whatsapp { top: 40%; left: 36%; --dur: 5.6s; --delay: -2.8s; --r: -6deg;
+                     background: linear-gradient(145deg, #46e58a, #0f9a4c);
+                     box-shadow: 0 14px 34px -8px rgba(40, 200, 110, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.4); }
+.floater--linkedin { top: 59%; left: 66%; --dur: 6.3s; --delay: -3.6s; --r: 7deg;
+                     background: linear-gradient(145deg, #3a9cf0, #0a66c2);
+                     box-shadow: 0 14px 34px -8px rgba(30, 120, 220, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.4); }
+.floater--github   { top: 78%; left: 38%; --dur: 6.6s; --delay: -0.9s; --r: 6deg;
+                     background: linear-gradient(145deg, #5a6cb0, #1d2656);
+                     box-shadow: 0 14px 34px -8px rgba(90, 130, 255, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(140, 170, 255, 0.35); }
 
 @keyframes floaty {
   0%, 100% { transform: translate(0, 0) rotate(var(--r)); }
@@ -151,10 +155,11 @@
   }
   .floater { position: absolute; top: 14px; width: 56px; height: 56px; }
   .floater svg { width: 26px; height: 26px; }
-  .floater--mail   { left: 2%;  }
-  .floater--phone  { left: 28%; }
-  .floater--pin    { left: 54%; }
-  .floater--github { left: 80%; }
+  .floater--mail     { left: 1%;  }
+  .floater--phone    { left: 21%; }
+  .floater--whatsapp { left: 41%; }
+  .floater--linkedin { left: 61%; }
+  .floater--github   { left: 81%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
