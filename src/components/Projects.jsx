@@ -24,7 +24,7 @@ export default function Projects() {
               key={`${project.title}-${clone ? 'copy' : 'main'}`}
               className="project"
               delay={(i % projects.length) * 120}
-              {...(clone ? { 'aria-hidden': 'true', inert: '' } : {})}
+              {...(clone ? { 'aria-hidden': 'true' } : {})}
             >
               <article>
                 {project.image && (
@@ -50,14 +50,14 @@ export default function Projects() {
 
                 <footer className="project__links">
                   {project.demo && (
-                    <a className="btn" href={project.demo} target="_blank" rel="noreferrer">
+                    <a className="btn" href={project.demo} target="_blank" rel="noreferrer" tabIndex={clone ? -1 : undefined}>
                       <FiExternalLink aria-hidden="true" />
                       Live demo
                       <span className="sr-only"> of {project.title}</span>
                     </a>
                   )}
                   {project.code && (
-                    <a className="btn btn--ghost" href={project.code} target="_blank" rel="noreferrer">
+                    <a className="btn btn--ghost" href={project.code} target="_blank" rel="noreferrer" tabIndex={clone ? -1 : undefined}>
                       <FiGithub aria-hidden="true" />
                       Source code
                       <span className="sr-only"> for {project.title}</span>

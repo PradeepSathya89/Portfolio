@@ -44,7 +44,7 @@ export default function Skills() {
               key={`${group.title}-${clone ? 'copy' : 'main'}`}
               className="skills__card"
               delay={(gi % skillGroups.length) * 110}
-              {...(clone ? { 'aria-hidden': 'true', inert: '' } : {})}
+              {...(clone ? { 'aria-hidden': 'true' } : {})}
             >
               <h3>{group.title}</h3>
               <p className="skills__note">{group.note}</p>
