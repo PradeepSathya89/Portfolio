@@ -29,7 +29,16 @@ export default function Projects() {
               <article>
                 {project.image && (
                   <div className="project__media">
-                    <img src={project.image} alt={`Preview of ${project.title}`} loading="lazy" />
+                    <img
+  src={project.image}
+  alt={`Preview of ${project.title}`}
+  loading="eager"
+  onLoad={() => console.log('Image loaded:', project.image)}
+  onError={(e) => {
+    console.error('Image failed:', project.image);
+    e.currentTarget.style.border = '2px solid red';
+  }}
+/>
                   </div>
                 )}
                 <header>

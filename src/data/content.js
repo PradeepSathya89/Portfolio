@@ -24,9 +24,9 @@ export const profile = {
   gmail: 'https://mail.google.com/mail/?view=cm&fs=1&to=kunabathulapradeepsathya@gmail.com&su=Hello%20Pradeep',
   resume: '/Pradeep-Sathya-Resume.pdf',
   stats: [
-    { value: '34+', label: 'Products built' },
-    { value: '12', label: 'Services booking' },
-    { value: '4', label: 'Live projects' },
+    { value: '36+', label: 'Products built' },
+    { value: '14', label: 'Services booking' },
+    { value: '5', label: 'Live projects' },
     { value: 'React', label: 'Main stack' },
   ],
   photo: '/profile.jpg',
