@@ -151,7 +151,7 @@ export const projects = [
   },
   {
   title: 'BusBee – Bus Ticket Booking',
-  image: '/projects/busbee.png',
+  image: '/projects/busbee.jpg',
   tech: ['React.js', 'JavaScript', 'CSS'],
   summary:
     'A responsive bus ticket booking website where users pick a source, destination and date, and browse popular routes with prices and travel times.',
