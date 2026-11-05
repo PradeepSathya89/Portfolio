@@ -149,6 +149,17 @@ export const projects = [
     image: '/projects/luxora.jpg',
     accent: 'd',
   },
+  {
+  title: 'BusBee – Bus Ticket Booking',
+  image: '/projects/busbee.jpg',
+  tech: ['React.js', 'JavaScript', 'CSS'],
+  summary:
+    'A responsive bus ticket booking website where users pick a source, destination and date, and browse popular routes with prices and travel times.',
+  contribution:
+    'Built the responsive layout, the route search form and the popular routes cards.',
+  demo: 'https://bus-bee-oc5o.vercel.app/',
+  accent: 'e',
+  }
 ];
 
 export const navLinks = [

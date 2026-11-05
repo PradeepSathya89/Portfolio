@@ -216,3 +216,9 @@ body::before{
   body{ background-position: top center; }
   body::before{ background-size: 26px 26px; }
 }
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 80px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

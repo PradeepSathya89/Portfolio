@@ -174,3 +174,14 @@
   border-color: var(--accent);
   box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.95), 0 0 0 1px var(--accent);
 }
+.project__media {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 1rem;
+}
+.project__media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
