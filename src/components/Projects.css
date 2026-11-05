@@ -175,13 +175,21 @@
   box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.95), 0 0 0 1px var(--accent);
 }
 .project__media {
+  width: calc(100% + 3.2rem);
+  height: 190px;
+  margin: -1.7rem -1.6rem 1.1rem;
   overflow: hidden;
+  border-bottom: 1px solid var(--line);
   border-radius: 12px 12px 0 0;
-  margin-bottom: 1rem;
+  background: #e5e5e5;
 }
+
 .project__media img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.5s ease;
 }
